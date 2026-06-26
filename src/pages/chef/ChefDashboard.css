@@ -1,0 +1,73 @@
+.chef-header-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.chef-stat {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid rgba(201, 162, 39, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.chef-stat strong {
+  display: block;
+  font-size: 2rem;
+  font-family: var(--font-display);
+  color: var(--gold);
+}
+
+.chef-stat span { font-size: 0.85rem; color: var(--text-muted); }
+
+.queue-title { margin-bottom: 1.25rem; font-size: 1.35rem; }
+
+.chef-queue {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.chef-card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.table-badge {
+  background: var(--gold-dim);
+  color: var(--gold);
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.chef-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.chef-items { color: var(--cream); margin-bottom: 0.35rem; }
+
+.chef-time {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.chef-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chef-tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; } .tab-btn { background: transparent; border: none; color: #aaa; padding: 10px 20px; font-size: 1.1em; cursor: pointer; display: flex; align-items: center; gap: 8px; border-radius: 8px; transition: all 0.3s; } .tab-btn:hover { background: rgba(255,255,255,0.05); color: #fff; } .tab-btn.active { background: var(--primary-color); color: #000; font-weight: bold; } .inventory-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; } .inventory-card { display: flex; flex-direction: column; justify-content: space-between; padding: 15px; gap: 15px; background: rgba(255,255,255,0.05); } .inv-info h4 { margin: 0 0 10px 0; font-size: 1.2em; color: #f5f0e8; }

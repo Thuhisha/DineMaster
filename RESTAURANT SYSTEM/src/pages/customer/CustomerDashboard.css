@@ -1,0 +1,80 @@
+.customer-dash .dash-stats { margin-bottom: 2rem; }
+
+.dash-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--bg-card);
+  border: 1px solid rgba(201, 162, 39, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+
+.dash-stat-card svg {
+  font-size: 1.75rem;
+  color: var(--gold);
+}
+
+.dash-stat-card strong {
+  display: block;
+  font-size: 1.5rem;
+  font-family: var(--font-display);
+}
+
+.dash-stat-card span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.dash-section { margin-bottom: 2.5rem; }
+
+.dash-section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-title-row h2 { margin: 0; }
+
+.res-list, .order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.res-item-head, .order-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.res-item h3 { font-size: 1.1rem; }
+
+.res-item p, .order-item p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.offer-tag {
+  color: var(--gold) !important;
+  margin-top: 0.5rem;
+}
+
+.res-actions { margin-top: 1rem; }
+
+.order-total {
+  font-weight: 700;
+  color: var(--gold) !important;
+  margin: 0.5rem 0 !important;
+}
+
+.empty { color: var(--text-muted); }
+
+.empty a { color: var(--gold); }

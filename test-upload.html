@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test S3 Upload</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 50px; background: #f4f4f9; }
+        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 400px; margin: auto; }
+        h2 { margin-top: 0; color: #333; }
+        input[type="file"] { margin-bottom: 20px; }
+        button { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #0056b3; }
+        #result { margin-top: 20px; word-wrap: break-word; color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Test S3 Image Upload</h2>
+        <p>Select an image to upload directly to your AWS S3 Bucket.</p>
+        <input type="file" id="fileInput" accept="image/*">
+        <br>
+        <button onclick="uploadImage()">Upload to S3</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        async function uploadImage() {
+            const fileInput = document.getElementById('fileInput');
+            const resultText = document.getElementById('result');
+            
+            if (fileInput.files.length === 0) {
+                alert("Please select a file first!");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("file", fileInput.files[0]);
+
+            resultText.style.color = "blue";
+            resultText.innerText = "Uploading... Please wait.";
+
+            try {
+                const response = await fetch("http://localhost:8082/api/menu/upload-image", {
+                    method: "POST",
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const url = await response.text();
+                    resultText.style.color = "green";
+                    resultText.innerHTML = "Success! Image uploaded to S3.<br><br>URL: <a href='" + url + "' target='_blank'>Click to view image</a>";
+                } else {
+                    const err = await response.text();
+                    resultText.style.color = "red";
+                    resultText.innerText = "Upload failed: " + err;
+                }
+            } catch (error) {
+                resultText.style.color = "red";
+                resultText.innerText = "Error connecting to server. Is your backend running on port 8082?";
+            }
+        }
+    </script>
+</body>
+</html>

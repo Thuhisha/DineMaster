@@ -1,0 +1,18 @@
+.reserve-page {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.reserve-container { max-width: 520px; }
+
+.reserve-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.btn-full { width: 100%; margin-top: 0.5rem; }
+
+@media (max-width: 500px) {
+  .reserve-form .form-row { grid-template-columns: 1fr; }
+}

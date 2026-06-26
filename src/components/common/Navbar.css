@@ -1,0 +1,136 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(15, 12, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--bg-dark);
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-btn {
+  position: relative;
+  font-size: 1.25rem;
+  color: var(--text);
+  padding: 0.5rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--gold);
+  color: var(--bg-dark);
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gold-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  .nav-links {
+    position: fixed;
+    top: 72px;
+    right: 0;
+    width: min(280px, 85vw);
+    height: calc(100vh - 72px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    background: var(--bg-card);
+    border-left: 1px solid rgba(201, 162, 39, 0.15);
+    transform: translateX(100%);
+    transition: transform var(--transition);
+    gap: 1.25rem;
+  }
+  .nav-links.open { transform: translateX(0); }
+  .mobile-overlay {
+    display: block;
+    position: fixed;
+    inset: 72px 0 0 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+}

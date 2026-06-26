@@ -1,0 +1,14 @@
+.payment-page { padding-bottom: 3rem; }
+.payment-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 1.25rem; }
+.payment-summary h3, .payment-methods h3 { margin-bottom: 1rem; color: var(--gold); }
+.payment-summary p { margin: 0.35rem 0; color: var(--text-muted); }
+.payment-summary hr { border-color: rgba(255,255,255,0.08); margin: 0.8rem 0; }
+.line { display: flex; justify-content: space-between; margin: 0.35rem 0; }
+.discount { color: var(--success); }
+.grand { font-weight: 700; color: var(--gold); border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 0.5rem; margin-top: 0.35rem; }
+.birthday-note { margin-top: 0.6rem; color: var(--gold-light); }
+.reward-note { margin-top: 0.3rem; color: var(--success); }
+.payment-methods label { display: block; margin: 0.4rem 0; color: var(--cream); }
+.mock-fields { display: grid; gap: 0.6rem; margin: 1rem 0; }
+.mock-fields input { background: var(--bg-elevated); border: 1px solid rgba(255,255,255,0.08); color: var(--text); padding: 0.7rem; border-radius: 10px; }
+@media (max-width: 800px) { .payment-grid { grid-template-columns: 1fr; } }

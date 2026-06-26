@@ -1,0 +1,87 @@
+.res-details-page { padding-bottom: 4rem; }
+
+.res-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.booking-summary h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--gold);
+}
+
+.booking-summary ul {
+  list-style: none;
+}
+
+.booking-summary li {
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.summary-cart {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(201, 162, 39, 0.2);
+}
+
+.summary-cart h4 { font-size: 0.9rem; margin-bottom: 0.75rem; }
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.summary-total {
+  margin-top: 0.5rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.birthday-preview {
+  margin: 0.5rem 0 0 0;
+  padding: 0.5rem;
+  background: rgba(201, 162, 39, 0.1);
+  border-radius: var(--radius);
+  color: var(--gold);
+  font-size: 0.875rem;
+}
+
+.mandatory-food-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(201, 162, 39, 0.1);
+  border-radius: var(--radius);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+}
+
+.mandatory-food-section h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--gold);
+  font-size: 0.95rem;
+}
+
+.food-hint {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.login-hint {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.login-hint a { color: var(--gold); }
+
+@media (max-width: 768px) {
+  .res-details-grid { grid-template-columns: 1fr; }
+}

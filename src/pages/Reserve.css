@@ -1,0 +1,36 @@
+.reserve-page {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.reserve-container { max-width: 520px; }
+
+.reserve-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.location-info {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #28a745;
+}
+
+.location-info p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.location-info strong {
+  color: #555;
+}
+
+.btn-full { width: 100%; margin-top: 0.5rem; }
+
+@media (max-width: 500px) {
+  .reserve-form .form-row { grid-template-columns: 1fr; }
+}

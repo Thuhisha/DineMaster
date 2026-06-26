@@ -1,0 +1,22 @@
+.main-content { padding-top: 72px; }
+
+.home-cta {
+  background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card));
+  border-top: 1px solid rgba(201, 162, 39, 0.1);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+}
+
+.home-cta-inner {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.home-cta h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 0.75rem;
+}
+
+.home-cta p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}

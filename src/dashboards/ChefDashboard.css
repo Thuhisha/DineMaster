@@ -1,0 +1,284 @@
+.chef-header-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.chef-stat {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid rgba(201, 162, 39, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.chef-stat strong {
+  display: block;
+  font-size: 2rem;
+  font-family: var(--font-display);
+  color: var(--gold);
+}
+
+.chef-stat span { font-size: 0.85rem; color: var(--text-muted); }
+
+.queue-title { margin-bottom: 1.25rem; font-size: 1.35rem; }
+
+.chef-queue {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.chef-card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.table-badge {
+  background: var(--gold-dim);
+  color: var(--gold);
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.chef-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.chef-items { color: var(--cream); margin-bottom: 0.35rem; }
+
+.chef-time {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.chef-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stat-icon { font-size: 1.5rem; color: var(--gold); margin-bottom: 0.25rem; }
+
+.notif-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--danger);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.chef-stat { position: relative; }
+
+.chef-stat.glass-panel {
+  background: rgba(26, 21, 18, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.live-pulse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--success);
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.queue-count {
+  background: var(--gold);
+  color: var(--bg-dark);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  margin-left: 0.5rem;
+  font-family: var(--font-body);
+}
+
+.chef-card.is-new {
+  border-color: var(--gold);
+  box-shadow: 0 0 20px rgba(201, 162, 39, 0.2);
+}
+
+.new-order-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--danger);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.chef-card { position: relative; }
+
+.chef-special {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--warning);
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(251, 191, 36, 0.1);
+  border-radius: var(--radius);
+}
+
+/* Tabs & Wait Timer */
+.chef-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.chef-wait-time {
+  background: rgba(0,0,0,0.4);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--cream);
+}
+.wait-timer {
+  font-weight: bold;
+  color: #ffb86c;
+}
+
+/* KDS Status Colors */
+.status-new { border-left: 4px solid var(--danger); box-shadow: 0 0 15px rgba(220, 53, 69, 0.15); }
+.status-cooking { border-left: 4px solid var(--warning); }
+.status-ready { border-left: 4px solid var(--success); }
+
+.badge-kds-new { background: var(--danger); color: white; }
+.badge-kds-cooking { background: var(--warning); color: #000; }
+.badge-kds-ready { background: var(--success); color: white; }
+
+/* Inventory Grid */
+.chef-inventory h2 { margin-bottom: 0.5rem; }
+.chef-inventory > p { margin-bottom: 2rem; color: var(--text-muted); }
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.inventory-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.inventory-card.out-of-stock {
+  opacity: 0.6;
+  filter: grayscale(80%);
+}
+
+.inventory-details {
+  flex: 1;
+}
+
+.inventory-details h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.status-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.text-success { color: var(--success); }
+.text-danger { color: var(--danger); }
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.toggle-btn:hover { transform: scale(1.1); }
+
+/* Pagination */
+.chef-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.page-info {
+  font-size: 0.95rem;
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* Add Grocery Form */
+.inventory-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.add-grocery-form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.add-grocery-form input {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  background: rgba(26, 21, 18, 0.8);
+  color: var(--cream);
+  outline: none;
+  width: 250px;
+}
+
+.add-grocery-form input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 10px rgba(201, 162, 39, 0.2);
+}
+

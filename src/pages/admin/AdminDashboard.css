@@ -1,0 +1,109 @@
+.admin-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-tab {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.admin-tab.active,
+.admin-tab:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: var(--gold-dim);
+}
+
+.analytics-grid { margin-bottom: 2rem; }
+
+.analytics-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(201, 162, 39, 0.12);
+}
+
+.analytics-card strong {
+  display: block;
+  font-size: 1.75rem;
+  font-family: var(--font-display);
+  color: var(--gold);
+}
+
+.analytics-card span { font-size: 0.8rem; color: var(--text-muted); }
+
+.admin-form { margin-bottom: 1.5rem; }
+
+.admin-form h3 { margin-bottom: 1rem; font-size: 1rem; }
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+  min-width: 100px;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  color: var(--text);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.form-grid input,
+.form-grid textarea {
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  color: var(--text);
+}
+
+.admin-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding: 1rem 1.25rem !important;
+}
+
+.admin-table-list,
+.admin-menu-list,
+.admin-res-list,
+.admin-customers,
+.offers-admin {
+  margin-top: 1rem;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.empty { color: var(--text-muted); padding: 1rem; }

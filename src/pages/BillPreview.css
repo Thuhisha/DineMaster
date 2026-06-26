@@ -1,0 +1,63 @@
+.bill-page {
+  padding: 6rem 0 4rem;
+  min-height: 80vh;
+}
+
+.bill-card {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.bill-header {
+  text-align: center;
+  border-bottom: 2px dashed rgba(201, 162, 39, 0.3);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bill-header h1 {
+  font-family: var(--font-display);
+  color: var(--gold);
+}
+
+.bill-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.bill-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.bill-table th,
+.bill-table td {
+  padding: 0.5rem 0;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.9rem;
+}
+
+.bill-table th { color: var(--text-muted); font-weight: 500; }
+
+.bill-totals { text-align: right; margin-bottom: 1rem; }
+
+.bill-totals p { font-size: 0.9rem; margin-bottom: 0.25rem; }
+
+.discount { color: var(--success); }
+
+.grand-total {
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  color: var(--gold) !important;
+  margin-top: 0.5rem !important;
+}
+
+.bill-thanks {
+  text-align: center;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}

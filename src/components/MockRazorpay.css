@@ -1,0 +1,330 @@
+.mock-rzp-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.mock-rzp-modal {
+  background: #ffffff;
+  width: 750px;
+  height: 520px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mock-rzp-header {
+  background: #f9f9f9;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.mock-rzp-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+.mock-rzp-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.mock-rzp-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+}
+
+.mock-rzp-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.mock-rzp-sidebar {
+  width: 200px;
+  background: #fdfdfd;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.mock-rzp-tab {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+}
+
+.mock-rzp-tab:hover {
+  background: #f5f5f5;
+}
+
+.mock-rzp-tab.active {
+  background: #fff;
+  border-left: 3px solid #528ff0;
+  color: #111;
+  font-weight: 600;
+}
+
+.mock-rzp-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.mock-rzp-search input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.mock-rzp-section-title {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.mock-rzp-bank-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.mock-rzp-bank-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-bottom: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.mock-rzp-bank-item:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.mock-rzp-bank-item:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.mock-rzp-bank-item:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.mock-rzp-bank-item:hover, .mock-rzp-bank-item.highlight {
+  background: #fcf8e3;
+}
+
+.bank-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.bank-logo.bob { background: #f06522; }
+.bank-logo.canara { background: #0066b3; }
+.bank-logo.pnb { background: #a32020; }
+.bank-logo.idbi { background: #1a8b5e; }
+.bank-logo.airtel { background: #ff0000; }
+
+.arrow {
+  margin-left: auto;
+  color: #ccc;
+  font-size: 18px;
+}
+
+.mock-rzp-footer {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  color: #666;
+}
+
+.mock-rzp-footer strong {
+  color: #3388ff;
+  font-style: italic;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.processing-modal {
+  width: 400px;
+  height: 300px;
+}
+
+.mock-rzp-processing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: #333;
+}
+
+.mock-rzp-processing h3 {
+  margin-bottom: 5px;
+}
+
+.mock-rzp-processing p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.mock-rzp-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #f0b90b;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 30px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.mock-rzp-cancel {
+  padding: 10px 40px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Success Modal Styles */
+.success-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 400px;
+  height: 300px;
+}
+
+.success-modal h3 {
+  margin: 20px 0 10px 0;
+  color: #2e7d32;
+  font-size: 24px;
+}
+
+.success-modal p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Green Checkmark Animation */
+.success-animation {
+  margin: 20px auto;
+}
+
+.checkmark-circle {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 50%;
+  background-color: #4caf50;
+  animation: scale-up 0.3s ease-out forwards;
+}
+
+.checkmark-stem {
+  position: absolute;
+  width: 5px;
+  height: 35px;
+  background-color: #fff;
+  left: 45px;
+  top: 15px;
+  transform: rotate(45deg);
+  animation: draw-stem 0.5s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.checkmark-kick {
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  background-color: #fff;
+  left: 28px;
+  top: 45px;
+  transform: rotate(45deg);
+  animation: draw-kick 0.5s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+@keyframes scale-up {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes draw-stem {
+  0% { height: 0; opacity: 1; }
+  100% { height: 35px; opacity: 1; }
+}
+
+@keyframes draw-kick {
+  0% { width: 0; opacity: 1; }
+  100% { width: 20px; opacity: 1; }
+}

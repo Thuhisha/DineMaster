@@ -1,0 +1,10 @@
+.success-page { position: relative; min-height: calc(100vh - 72px); display: flex; align-items: center; }
+.success-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600&q=80') center/cover no-repeat; }
+.success-overlay { position: absolute; inset: 0; background: rgba(15,12,10,0.72); }
+.success-card { position: relative; z-index: 1; max-width: 760px; margin: 2rem auto; }
+.success-card h1 { text-align: center; margin-bottom: 0.5rem; font-size: clamp(2rem,5vw,3rem); }
+.success-card .sub { text-align: center; color: var(--text-muted); margin-bottom: 1rem; }
+.success-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem 1rem; margin: 1rem 0; }
+.success-grid p { margin: 0; font-size: 0.95rem; color: var(--cream); }
+.success-actions { display: flex; gap: 0.75rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap; }
+@media (max-width: 650px) { .success-grid { grid-template-columns: 1fr; } }

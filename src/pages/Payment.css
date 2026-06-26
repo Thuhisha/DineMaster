@@ -1,0 +1,31 @@
+.payment-page { padding-bottom: 3rem; }
+.payment-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 1.25rem; }
+.payment-summary h3, .payment-methods h3 { margin-bottom: 1rem; color: var(--gold); }
+.payment-summary p { margin: 0.35rem 0; color: var(--text-muted); }
+.payment-summary hr { border-color: rgba(255,255,255,0.08); margin: 0.8rem 0; }
+.line { display: flex; justify-content: space-between; margin: 0.35rem 0; }
+.discount { color: var(--success); }
+.grand { font-weight: 700; color: var(--gold); border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 0.5rem; margin-top: 0.35rem; }
+.birthday-note { margin-top: 0.6rem; color: var(--gold-light); }
+.reward-note { margin-top: 0.3rem; color: var(--success); }
+.payment-methods label { display: block; margin: 0.4rem 0; color: var(--cream); }
+.mock-fields { display: grid; gap: 0.6rem; margin: 1rem 0; }
+.mock-fields input { background: var(--bg-elevated); border: 1px solid rgba(255,255,255,0.08); color: var(--text); padding: 0.7rem; border-radius: 10px; }
+@media (max-width: 800px) { .payment-grid { grid-template-columns: 1fr; } }
+
+.razorpay-mock-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; z-index: 1000; backdrop-filter: blur(4px); }
+.razorpay-mock-modal { background: #fff; width: 380px; border-radius: 6px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #333; }
+.rzp-header { background: #3399cc; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+.rzp-logo-section span { font-weight: bold; font-size: 1.2rem; display: block; }
+.rzp-logo-section p { font-size: 0.8rem; margin: 5px 0 0; opacity: 0.8; }
+.rzp-amount { font-size: 1.5rem; font-weight: 500; }
+.rzp-body { padding: 20px; background: #f9f9f9; }
+.rzp-body > p { margin-bottom: 15px; font-weight: 500; color: #555; }
+.rzp-options { display: flex; flex-direction: column; gap: 10px; }
+.rzp-option-btn { background: white; border: 1px solid #ddd; padding: 12px; border-radius: 4px; text-align: left; cursor: pointer; color: #444; font-weight: 500; transition: border-color 0.2s; }
+.rzp-option-btn:hover { border-color: #3399cc; }
+.rzp-actions { display: flex; gap: 10px; margin-top: 10px; }
+.rzp-actions .btn { flex: 1; padding: 10px; font-weight: bold; border-radius: 4px; border: none; cursor: pointer; }
+.btn-success { background: #28a745; color: white; }
+.btn-danger { background: #dc3545; color: white; }
+

@@ -1,0 +1,160 @@
+.receipt-page {
+  min-height: 100vh;
+  padding: 8rem 2rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--background);
+}
+
+.receipt-card {
+  background: rgba(25, 25, 25, 0.95);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.receipt-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #22c55e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+}
+
+.receipt-header h2 {
+  color: #22c55e;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.receipt-header p {
+  color: var(--text-secondary);
+}
+
+.receipt-body {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.receipt-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.receipt-row:last-of-type {
+  margin-bottom: 0;
+}
+
+.receipt-row span {
+  color: var(--text-secondary);
+}
+
+.receipt-row strong {
+  color: var(--text-primary);
+  text-align: right;
+  max-width: 60%;
+  word-break: break-all;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(201, 162, 39, 0.2);
+  margin: 1.5rem 0;
+}
+
+.receipt-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.receipt-total .amount {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.receipt-footer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.receipt-footer .btn {
+  flex: 1;
+}
+
+.receipt-loader {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-top: 5rem;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+  }
+  
+  .receipt-page {
+    padding: 0;
+    background: white;
+  }
+
+  .receipt-card {
+    background: white;
+    border: none;
+    box-shadow: none;
+    color: black;
+  }
+
+  .receipt-header h2 {
+    color: #16a34a;
+  }
+
+  .receipt-header p,
+  .receipt-row span {
+    color: #666;
+  }
+
+  .receipt-row strong,
+  .receipt-total {
+    color: black;
+  }
+
+  .receipt-total .amount {
+    color: black;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
